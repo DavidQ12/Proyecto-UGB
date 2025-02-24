@@ -4,78 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UGBHUB</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="images/WhatsApp_Image_2025-02-16_at_22.35.23-removebg-preview.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="images/WhatsApp_Image_2025-02-16_at_22.35.23-removebg-preview.png" type="image/png">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <!-- Header -->
+    <header class="bg-dark text-white sticky-top shadow-sm">
         <div class="container">
-            <div class="logo">
-                <img src="images/WhatsApp_Image_2025-02-16_at_22.35.23-removebg-preview.png" alt="Logo UGB" width="90" height="95">
-            <h1>UGBHUB</h1>
-            <nav>
-                <ul>
-                    <li><a href="#quienes-somos">¿Quiénes Somos?</a></li>
-                    <li><a href="#mision">Misión</a></li>
-                    <li><a href="#vision">Visión</a></li>
-                    <li><a href="conocenos.html">Conócenos</a></li>
-                </ul>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand d-flex align-items-center" href="#">
+                        <img src="images/WhatsApp_Image_2025-02-16_at_22.35.23-removebg-preview.png" alt="Logo UGB" width="60" height="65" class="d-inline-block align-text-top me-2">
+                        <h1 class="h4 mb-0">UGBHUB</h1>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="#quienes-somos">¿Quiénes Somos?</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#que-es-ugbhub">¿Qué es UGBHUB?</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#mision">Misión</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#vision">Visión</a></li>
+                            <li class="nav-item"><a class="nav-link" href="conocenos.html">Conócenos</a></li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
 
-    <section id="hero">
+    <!-- Hero Section -->
+    <section id="hero" class="bg-primary text-white text-center py-5">
         <div class="container">
-            <h2>Bienvenidos a la Innovación</h2>
-            <p>Conectando a la comunidad universitaria con soluciones digitales.</p>
-            <a href="#quienes-somos" class="btn">Conócenos</a>
+            <h2 class="display-4 fw-bold">Bienvenidos a la Innovación</h2>
+            <p class="lead">Conectando a la comunidad universitaria con soluciones digitales.</p>
+            <a href="#quienes-somos" class="btn btn-light btn-lg">Conócenos</a>
         </div>
     </section>
 
-    <section id="quienes-somos" class="section">
+    <!-- ¿Quiénes Somos? -->
+    <section id="quienes-somos" class="py-5">
         <div class="container">
-            <h2>¿Quiénes Somos?</h2>
-            <p>Somos un equipo de estudiantes comprometidos de la Universidad Gerardo Barrios (UGB), apasionados por la tecnología y enfocados en crear soluciones prácticas para nuestra comunidad universitaria. Nuestro objetivo es facilitar la interacción, la orientación y el acceso a recursos dentro del campus mediante herramientas digitales innovadoras.</p>
+            <h2 class="text-center mb-4">¿Quiénes Somos?</h2>
+            <p class="text-center">Somos un equipo de estudiantes comprometidos de la Universidad Gerardo Barrios (UGB), apasionados por la tecnología y enfocados en crear soluciones prácticas para nuestra comunidad universitaria. Nuestro objetivo es facilitar la interacción, la orientación y el acceso a recursos dentro del campus mediante herramientas digitales innovadoras.</p>
         </div>
     </section>
 
-    <section id="que-es-ugbhub" class="section">
+    <!-- ¿Qué es UGBHUB? -->
+    <section id="que-es-ugbhub" class="bg-light py-5">
         <div class="container">
-            <h2>¿Qué es UGBHUB?</h2>
-            <p>UGBHUB es mucho más que una aplicación: es tu compañero digital dentro del campus universitario. Nuestra plataforma web y móvil está diseñada para facilitar la orientación, la comunicación y el acceso a información en tiempo real, mejorando la experiencia estudiantil.</p>
-            <ul>
-                <li><strong>🚀 Encuentra todo en segundos:</strong> Con nuestra <em>Guía de Ubicación</em>, localiza salones, oficinas y espacios clave sin perder tiempo.</li>
-                <li><strong>💬 Conéctate con la comunidad:</strong> Participa en el <em>Foro Universitario</em> y mantente informado sobre eventos, anuncios y temas de interés.</li>
-                <li><strong>📊 Toma mejores decisiones:</strong> Consulta en tiempo real la disponibilidad de espacios como la biblioteca y la cafetería gracias a nuestro sistema de <em>Monitoreo en Tiempo Real</em>.</li>
-                <li><strong>📱 Accesible desde cualquier lugar:</strong> Disponible en dispositivos móviles y web, para que siempre tengas la información que necesitas a la mano.</li>
-            </ul>
-            <p>🚀 Descubre una nueva forma de vivir tu universidad con UGBHUB y lleva tu experiencia estudiantil al siguiente nivel.</p>
+            <h2 class="text-center mb-4">¿Qué es UGBHUB?</h2>
+            <p class="text-center">UGBHUB es mucho más que una aplicación: es tu compañero digital dentro del campus universitario. Nuestra plataforma web y móvil está diseñada para facilitar la orientación, la comunicación y el acceso a información en tiempo real, mejorando la experiencia estudiantil.</p>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <ul class="list-group">
+                        <li class="list-group-item">🚀 Encuentra todo en segundos: Con nuestra <strong>Guía de Ubicación</strong>, localiza salones, oficinas y espacios clave sin perder tiempo.</li>
+                        <li class="list-group-item">💬 Conéctate con la comunidad: Participa en el <strong>Foro Universitario</strong> y mantente informado sobre eventos, anuncios y temas de interés.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-group">
+                        <li class="list-group-item">📊 Toma mejores decisiones: Consulta en tiempo real la disponibilidad de espacios como la biblioteca y la cafetería gracias a nuestro sistema de <strong>Monitoreo en Tiempo Real</strong>.</li>
+                        <li class="list-group-item">📱 Accesible desde cualquier lugar: Disponible en dispositivos móviles y web, para que siempre tengas la información que necesitas a la mano.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-center mt-4">🚀 Descubre una nueva forma de vivir tu universidad con UGBHUB y lleva tu experiencia estudiantil al siguiente nivel.</p>
         </div>
     </section>
 
-    <section id="mision" class="section">
+    <!-- Misión -->
+    <section id="mision" class="py-5">
         <div class="container">
-            <h2>Nuestra Misión</h2>
-            <p>Brindar a los estudiantes, docentes y visitantes de la UGB un espacio integral que fomente la comunicación, facilite la ubicación de instalaciones y mejore la experiencia en la biblioteca.</p>
+            <h2 class="text-center mb-4">Nuestra Misión</h2>
+            <p class="text-center">Brindar a los estudiantes, docentes y visitantes de la UGB un espacio integral que fomente la comunicación, facilite la ubicación de instalaciones y mejore la experiencia en la biblioteca.</p>
         </div>
     </section>
 
-    <section id="vision" class="section">
+    <!-- Visión -->
+    <section id="vision" class="bg-light py-5">
         <div class="container">
-            <h2>Nuestra Visión</h2>
-            <p>Convertirnos en una plataforma esencial para la comunidad universitaria, destacando por la innovación, la utilidad y el impacto positivo en la vida académica.</p>
+            <h2 class="text-center mb-4">Nuestra Visión</h2>
+            <p class="text-center">Convertirnos en una plataforma esencial para la comunidad universitaria, destacando por la innovación, la utilidad y el impacto positivo en la vida académica.</p>
         </div>
     </section>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
         <div class="container">
-            <p>&copy; 2023 UGB - Innovación y Comunidad.</p>
+            <p class="mb-0">&copy; 2023 UGB - Innovación y Comunidad.</p>
         </div>
     </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
 </html>
