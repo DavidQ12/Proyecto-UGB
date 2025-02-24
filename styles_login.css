@@ -1,0 +1,52 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-card h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.login-card .form-label {
+    font-weight: 500;
+    color: #555;
+}
+
+.login-card .btn-primary {
+    background-color: #1abc9c;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.login-card .btn-primary:hover {
+    background-color: #16a085;
+}
+
+.login-card a {
+    color: #1abc9c;
+    text-decoration: none;
+}
+
+.login-card a:hover {
+    text-decoration: underline;
+}
