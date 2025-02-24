@@ -32,9 +32,17 @@ body {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-.project-card img {
+.project-image {
+    height: 200px; /* Tamaño fijo para las imágenes */
+    overflow: hidden;
     border-radius: 10px;
     margin-bottom: 15px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen al contenedor */
 }
 
 .project-card h3 {
@@ -60,9 +68,16 @@ body {
     color: #666;
 }
 
+.buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 .btn-primary, .btn-secondary, .btn-info {
-    margin-right: 10px;
-    margin-bottom: 10px;
+    flex: 1;
+    min-width: 100px;
+    text-align: center;
 }
 
 .btn-primary {
