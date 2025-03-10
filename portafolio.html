@@ -52,7 +52,7 @@
                         <li>Semana 1: CHAMPFROGS</li>
                     </ul>
                     <div class="buttons">
-                        <a href="docs/champfrogs.pdf" target="_blank" class="btn btn-primary">Vista Previa</a>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#previewModal" onclick="loadPreview('docs/champfrogs.pdf')">Vista Previa</a>
                         <a href="docs/champfrogs.pdf" download class="btn btn-secondary">Descargar</a>
                         <a href="https://ugbedu.sharepoint.com/sites/ola/_layouts/15/AccessDenied.aspx?Source=https%3A%2F%2Fugbedu%2Esharepoint%%2Fsites%2Fola%2FDocumentos%20compartidos%2FGeneral%2FRecordings%2FReuni%C3%B3n%20en%20_General_-20250126_232233-Grabaci%C3%B3n%20de%20la%20reuni%C3%B3n%2Emp4%3Fweb%3D1%26referrer%3DTeams%2ETEAMS-ELECTRON%26referrerScenario%3DMeetingChicletGetLink%2EviewEnlaces%2520a%2520un%2520sitio%2520externo%2E&correlation=418784a1-40b4-8000-1cb9-3dac3e5de0bc&Type=item&name=3d2d0278-a4ad-4cca-b3a7-889500b5a2cc&listItemId=8&listItemUniqueId=cfbfc5c3-1a98-465e-9952-a9e9501e54ca" target="_blank" class="btn btn-info">Ver Grabación</a>
                     </div>
@@ -70,7 +70,7 @@
                         <li>Semana 2: WORKEXPO</li>
                     </ul>
                     <div class="buttons">
-                        <a href="docs/TABLERO DE CELEBRACIÓN Y PREGUNTAS-1.pdf" target="_blank" class="btn btn-primary">Vista Previa</a>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#previewModal" onclick="loadPreview('docs/TABLERO DE CELEBRACIÓN Y PREGUNTAS-1.pdf')">Vista Previa</a>
                         <a href="docs/TABLERO DE CELEBRACIÓN Y PREGUNTAS-1.pdf" download class="btn btn-secondary">Descargar</a>
                         <a href="https://www.youtube.com/watch?v=HetDujjcqmU" target="_blank" class="btn btn-info">Ver Grabación</a>
                     </div>
@@ -88,7 +88,7 @@
                         <li>Semana 3: Creando OKRS</li>
                     </ul>
                     <div class="buttons">
-                        <a href="docs/Tablero OKRS.pdf" target="_blank" class="btn btn-primary">Vista Previa</a>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#previewModal" onclick="loadPreview('docs/Tablero OKRS.pdf')">Vista Previa</a>
                         <a href="docs/Tablero OKRS.pdf" download class="btn btn-secondary">Descargar</a>
                         <a href="https://ugbedu.sharepoint.com/sites/ola/_layouts/15/stream.aspx?id=%2Fsites%2Fola%2FDocumentos%20compartidos%2FGeneral%2FRecordings%2FReuni%C3%B3n%20en%20%5FGeneral%5F%2D20250209%5F224742%2DGrabaci%C3%B3n%20de%20la%20reuni%C3%B3n%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Eba3257bd%2Dd3f1%2D494a%2D9ace%2Df03d9c8769eb" target="_blank" class="btn btn-info">Ver Grabación</a>
                     </div>
@@ -106,8 +106,8 @@
                         <li>Semana 5: Caso de negocio</li>
                     </ul>
                     <div class="buttons">
-                        <a href="docs/PLANTILLA CASO DE NEGOCIO (1).pdf" target="_blank" class="btn btn-primary">Vista Previa</a>
-                        <a href="docs/PLANTILLA CASO DE NEGOCIO (1).pdf" download class="btn btn-secondary">Descargar</a>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#previewModal" onclick="loadPreview('docs/PLANTILLA CASO DE NEGOCIO (2).pdf')">Vista Previa</a>
+                        <a href="docs/PLANTILLA CASO DE NEGOCIO (2).pdf" download class="btn btn-secondary">Descargar</a>
                         <a href="https://drive.google.com/file/d/1XvJT3EzCshDk3560NX2LIZpWp64JUYE0/view?usp=sharing" target="_blank" class="btn btn-info">Ver Grabación</a>
                     </div>
                 </div>
@@ -115,7 +115,30 @@
         </div>
     </div>
 
+    <!-- Modal para la vista previa -->
+    <div class="modal fade" id="previewModal" tabindex="-1" aria-labelledby="previewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="previewModalLabel">Vista Previa del Documento</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe id="previewIframe" src="" width="100%" height="500px" style="border:none;"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function loadPreview(url) {
+            document.getElementById('previewIframe').src = url;
+        }
+    </script>
 </body>
 </html>
