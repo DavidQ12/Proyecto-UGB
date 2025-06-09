@@ -339,9 +339,7 @@
                         </ul>
                         <div class="buttons d-grid gap-2 d-md-block">
                             <a href="docs/ilovepdf_merged (1).pdf" 
-                               target="_blank" 
-                               rel="noopener noreferrer"
-                               class="btn btn-primary btn-sm">Vista Previa</a>
+                               class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#previewModal" onclick="loadPreview('docs/ilovepdf_merged (1).pdf')">Vista Previa</a>
                             <a href="docs/ilovepdf_merged (1).pdf" 
                                download 
                                class="btn btn-secondary btn-sm">Descargar</a>
@@ -369,9 +367,7 @@
                         </ul>
                         <div class="buttons d-grid gap-2 d-md-block">
                             <a href="docs/ilovepdf_merged.pdf" 
-                               target="_blank" 
-                               rel="noopener noreferrer"
-                               class="btn btn-primary btn-sm">Vista Previa</a>
+                               class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#previewModal" onclick="loadPreview('docs/ilovepdf_merged.pdf')">Vista Previa</a>
                             <a href="docs/ilovepdf_merged.pdf" 
                                download 
                                class="btn btn-secondary btn-sm">Descargar</a>
@@ -473,7 +469,19 @@
     <!-- Custom JS (cargado con defer) -->
     <script defer>
         function loadPreview(url) {
-            document.getElementById('previewIframe').src = url;
+            // Verificar si es un archivo PDF local
+            if (url.endsWith('.pdf')) {
+                document.getElementById('previewIframe').src = url;
+            } else {
+                // Si no es PDF, abrir en nueva pestaña
+                window.open(url, '_blank');
+                // Cierra el modal si se abre
+                var modal = bootstrap.Modal.getInstance(document.getElementById('previewModal'));
+                if (modal) {
+                    modal.hide();
+                }
+                return false; // Previene el comportamiento por defecto
+            }
         }
         
         // Efecto de aparición gradual para las tarjetas
