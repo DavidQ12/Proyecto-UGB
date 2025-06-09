@@ -4,22 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>UGBHUB - Portafolio</title>
+    <title>UGBHUB - Portafolio de Proyectos</title>
+    <meta name="description" content="Portafolio de proyectos desarrollados por UGBHUB">
+    
+    <!-- Preconexiones para mejorar performance -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Favicon -->
-    <link rel="icon" href="images/WhatsApp_Image_2025-02-16_at_22.35.23-removebg-preview.png" type="image/x-icon">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles_portafolio.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+    <!-- Google Fonts (preload para mejor performance) -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Favicon (optimizado con múltiples tamaños) -->
+    <link rel="icon" href="images/WhatsApp_Image_2025-02-16_at_22.35.23-removebg-preview.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/WhatsApp_Image_2025-02-16_at_22.35.23-removebg-preview.png">
+    
+    <!-- Custom CSS (cargado con preload) -->
+    <link rel="preload" href="styles_portafolio.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles_portafolio.css"></noscript>
 </head>
 <body>
     <!-- Header -->
-    <header class="bg-dark py-3">
+    <header class="bg-dark py-3 sticky-top">
         <nav class="navbar navbar-expand-lg navbar-dark container">
             <div class="logo">
-                <img src="images/WhatsApp_Image_2025-02-16_at_22.35.23-removebg-preview.png" alt="Logo UGBHUB" class="img-fluid">
+                <img src="images/WhatsApp_Image_2025-02-16_at_22.35.23-removebg-preview.png" 
+                     alt="Logo UGBHUB" 
+                     class="img-fluid"
+                     width="50"
+                     height="50"
+                     loading="lazy">
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,293 +46,446 @@
                     <li class="nav-item"><a href="index.html" class="nav-link text-white" id="inicio">Inicio</a></li>
                     <li class="nav-item"><a href="index.html" class="nav-link text-white" id="nosotros">Sobre Nosotros</a></li>
                     <li class="nav-item"><a href="conocenos.html" class="nav-link text-white" id="team">Nuestro Equipo</a></li>
-                    <li class="nav-item"><a href="portafolio.html" class="nav-link text-white active-link" id="portafolio">Portafolio</a></li>
+                    <li class="nav-item"><a href="portafolio.html" class="nav-link text-white active" id="portafolio">Portafolio</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <!-- Main Content -->
-    <div class="container mt-5">
-        <h1 class="text-center mb-4">Portafolio</h1>
-        <p class="portfolio-description text-center">"Descubre los proyectos que hemos desarrollado"</p>
-        <div class="row">
+    <main class="container mt-5 pt-4">
+        <h1 class="text-center mb-4 animate__animated animate__fadeIn">Portafolio de Proyectos</h1>
+        <p class="portfolio-description text-center mb-5">"Descubre los proyectos que hemos desarrollado con dedicación y profesionalismo"</p>
+        
+        <div class="row g-4">
             <!-- CHAMPFROGS -->
-            <div class="col-md-6 col-lg-4 mb-4 fade-in-up">
-                <div class="project-card">
+            <div class="col-md-6 col-lg-4 fade-in-up">
+                <div class="project-card h-100">
                     <div class="project-image">
-                        <img src="images/champfrogs1.jpg" alt="Imagen CHAMPFROGS" class="img-fluid">
+                        <img src="images/champfrogs1.jpg" 
+                             alt="Imagen CHAMPFROGS" 
+                             class="img-fluid rounded-top"
+                             loading="lazy"
+                             width="400"
+                             height="225">
                     </div>
-                    <h3>CHAMPFROGS</h3>
-                    <h5>Tareas Realizadas:</h5>
-                    <ul>
-                        <li>Semana 1: CHAMPFROGS</li>
-                    </ul>
-                    <div class="buttons">
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#previewModal" onclick="loadPreview('docs/champfrogs.pdf')">Vista Previa</a>
-                        <a href="docs/champfrogs.pdf" download class="btn btn-secondary">Descargar</a>
-                        <a href="https://ugbedu.sharepoint.com/sites/ola/_layouts/15/AccessDenied.aspx?Source=https%3A%2F%2Fugbedu%2Esharepoint%%2Fsites%2Fola%2FDocumentos%20compartidos%2FGeneral%2FRecordings%2FReuni%C3%B3n%20en%20_General_-20250126_232233-Grabaci%C3%B3n%20de%20la%20reuni%C3%B3n%2Emp4%3Fweb%3D1%26referrer%3DTeams%2ETEAMS-ELECTRON%26referrerScenario%3DMeetingChicletGetLink%2EviewEnlaces%2520a%2520un%2520sitio%2520externo%2E&correlation=418784a1-40b4-8000-1cb9-3dac3e5de0bc&Type=item&name=3d2d0278-a4ad-4cca-b3a7-889500b5a2cc&listItemId=8&listItemUniqueId=cfbfc5c3-1a98-465e-9952-a9e9501e54ca" target="_blank" class="btn btn-info">Ver Grabación</a>
+                    <div class="p-3">
+                        <h3 class="h4">CHAMPFROGS</h3>
+                        <h5 class="h6 text-muted">Tareas Realizadas:</h5>
+                        <ul class="mb-3">
+                            <li>Semana 1: CHAMPFROGS</li>
+                        </ul>
+                        <div class="buttons d-grid gap-2 d-md-block">
+                            <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#previewModal" onclick="loadPreview('docs/champfrogs.pdf')">Vista Previa</a>
+                            <a href="docs/champfrogs.pdf" download class="btn btn-secondary btn-sm">Descargar</a>
+                            <a href="https://ugbedu.sharepoint.com/sites/ola/_layouts/15/AccessDenied.aspx?Source=https%3A%2F%2Fugbedu%2Esharepoint%%2Fsites%2Fola%2FDocumentos%20compartidos%2FGeneral%2FRecordings%2FReuni%C3%B3n%20en%20_General_-20250126_232233-Grabaci%C3%B3n%20de%20la%20reuni%C3%B3n%2Emp4%3Fweb%3D1%26referrer%3DTeams%2ETEAMS-ELECTRON%26referrerScenario%3DMeetingChicletGetLink%2EviewEnlaces%2520a%2520un%2520sitio%2520externo%2E&correlation=418784a1-40b4-8000-1cb9-3dac3e5de0bc&Type=item&name=3d2d0278-a4ad-4cca-b3a7-889500b5a2cc&listItemId=8&listItemUniqueId=cfbfc5c3-1a98-465e-9952-a9e9501e54ca" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="btn btn-info btn-sm">Ver Grabación</a>
+                        </div>
                     </div>
                 </div>
             </div>
+            
             <!-- WORKEXPO -->
-            <div class="col-md-6 col-lg-4 mb-4 fade-in-up">
-                <div class="project-card">
+            <div class="col-md-6 col-lg-4 fade-in-up">
+                <div class="project-card h-100">
                     <div class="project-image">
-                        <img src="images/WORKEXPO1.jpg" alt="Imagen WORKEXPO" class="img-fluid">
+                        <img src="images/WORKEXPO1.jpg" 
+                             alt="Imagen WORKEXPO" 
+                             class="img-fluid rounded-top"
+                             loading="lazy"
+                             width="400"
+                             height="225">
                     </div>
-                    <h3>WORKEXPO</h3>
-                    <h5>Tareas Realizadas:</h5>
-                    <ul>
-                        <li>Semana 2: WORKEXPO</li>
-                    </ul>
-                    <div class="buttons">
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#previewModal" onclick="loadPreview('docs/TABLERO DE CELEBRACIÓN Y PREGUNTAS-1.pdf')">Vista Previa</a>
-                        <a href="docs/TABLERO DE CELEBRACIÓN Y PREGUNTAS-1.pdf" download class="btn btn-secondary">Descargar</a>
-                        <a href="https://www.youtube.com/watch?v=HetDujjcqmU" target="_blank" class="btn btn-info">Ver Grabación</a>
+                    <div class="p-3">
+                        <h3 class="h4">WORKEXPO</h3>
+                        <h5 class="h6 text-muted">Tareas Realizadas:</h5>
+                        <ul class="mb-3">
+                            <li>Semana 2: WORKEXPO</li>
+                        </ul>
+                        <div class="buttons d-grid gap-2 d-md-block">
+                            <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#previewModal" onclick="loadPreview('docs/TABLERO DE CELEBRACIÓN Y PREGUNTAS-1.pdf')">Vista Previa</a>
+                            <a href="docs/TABLERO DE CELEBRACIÓN Y PREGUNTAS-1.pdf" download class="btn btn-secondary btn-sm">Descargar</a>
+                            <a href="https://www.youtube.com/watch?v=HetDujjcqmU" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="btn btn-info btn-sm">Ver Grabación</a>
+                        </div>
                     </div>
                 </div>
             </div>
+            
             <!-- Creando OKRS -->
-            <div class="col-md-6 col-lg-4 mb-4 fade-in-up">
-                <div class="project-card">
+            <div class="col-md-6 col-lg-4 fade-in-up">
+                <div class="project-card h-100">
                     <div class="project-image">
-                        <img src="images/okr1.jpg" alt="Imagen Creando OKRS" class="img-fluid">
+                        <img src="images/okr1.jpg" 
+                             alt="Imagen Creando OKRS" 
+                             class="img-fluid rounded-top"
+                             loading="lazy"
+                             width="400"
+                             height="225">
                     </div>
-                    <h3>Creando OKRS</h3>
-                    <h5>Tareas Realizadas:</h5>
-                    <ul>
-                        <li>Semana 3: Creando OKRS</li>
-                    </ul>
-                    <div class="buttons">
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#previewModal" onclick="loadPreview('docs/Tablero OKRS.pdf')">Vista Previa</a>
-                        <a href="docs/Tablero OKRS.pdf" download class="btn btn-secondary">Descargar</a>
-                        <a href="https://ugbedu.sharepoint.com/sites/ola/_layouts/15/stream.aspx?id=%2Fsites%2Fola%2FDocumentos%20compartidos%2FGeneral%2FRecordings%2FReuni%C3%B3n%20en%20%5FGeneral%5F%2D20250209%5F224742%2DGrabaci%C3%B3n%20de%20la%20reuni%C3%B3n%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Eba3257bd%2Dd3f1%2D494a%2D9ace%2Df03d9c8769eb" target="_blank" class="btn btn-info">Ver Grabación</a>
+                    <div class="p-3">
+                        <h3 class="h4">Creando OKRS</h3>
+                        <h5 class="h6 text-muted">Tareas Realizadas:</h5>
+                        <ul class="mb-3">
+                            <li>Semana 3: Creando OKRS</li>
+                        </ul>
+                        <div class="buttons d-grid gap-2 d-md-block">
+                            <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#previewModal" onclick="loadPreview('docs/Tablero OKRS.pdf')">Vista Previa</a>
+                            <a href="docs/Tablero OKRS.pdf" download class="btn btn-secondary btn-sm">Descargar</a>
+                            <a href="https://ugbedu.sharepoint.com/sites/ola/_layouts/15/stream.aspx?id=%2Fsites%2Fola%2FDocumentos%20compartidos%2FGeneral%2FRecordings%2FReuni%C3%B3n%20en%20%5FGeneral%5F%2D20250209%5F224742%2DGrabaci%C3%B3n%20de%20la%20reuni%C3%B3n%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Eba3257bd%2Dd3f1%2D494a%2D9ace%2Df03d9c8769eb" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="btn btn-info btn-sm">Ver Grabación</a>
+                        </div>
                     </div>
                 </div>
             </div>
+            
             <!-- Caso de negocio -->
-            <div class="col-md-6 col-lg-4 mb-4 fade-in-up">
-                <div class="project-card">
+            <div class="col-md-6 col-lg-4 fade-in-up">
+                <div class="project-card h-100">
                     <div class="project-image">
-                        <img src="images/caso negocio.png" alt="Imagen Caso de negocio" class="img-fluid">
+                        <img src="images/caso negocio.png" 
+                             alt="Imagen Caso de negocio" 
+                             class="img-fluid rounded-top"
+                             loading="lazy"
+                             width="400"
+                             height="225">
                     </div>
-                    <h3>Caso de negocio</h3>
-                    <h5>Tareas Realizadas:</h5>
-                    <ul>
-                        <li>Semana 5: Caso de negocio</li>
-                    </ul>
-                    <div class="buttons">
-                        <!-- Botón de Vista Previa (modal) -->
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#previewModal" onclick="loadPreview('docs/PLANTILLA_CASO_DE_NEGOCIO_(2).pdf')">
-                            Vista Previa
-                        </a>
-                    
-                        <!-- Botón para abrir el HTML convertido -->
-                        <a href="PLANTILLA CASO DE NEGOCIO (2)-converted.html" target="_blank" class="btn btn-secondary">
-                            Ver en HTML
-                        </a>
-                    
-                        <!-- Botón de Descargar PDF -->
-                        <a href="docs/PLANTILLA_CASO_DE_NEGOCIO_(2).pdf" download class="btn btn-secondary">
-                            Descargar
-                        </a>
-                    
-                        <!-- Botón para ver la grabación -->
-                        <a href="https://drive.google.com/file/d/1XvJT3EzCshDk3560NX2LIZpWp64JUYE0/view?usp=sharing" target="_blank" class="btn btn-info">
-                            Ver Grabación
-                        </a>
+                    <div class="p-3">
+                        <h3 class="h4">Caso de negocio</h3>
+                        <h5 class="h6 text-muted">Tareas Realizadas:</h5>
+                        <ul class="mb-3">
+                            <li>Semana 5: Caso de negocio</li>
+                        </ul>
+                        <div class="buttons d-grid gap-2 d-md-block">
+                            <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#previewModal" onclick="loadPreview('docs/PLANTILLA_CASO_DE_NEGOCIO_(2).pdf')">Vista Previa</a>
+                            <a href="PLANTILLA CASO DE NEGOCIO (2)-converted.html" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">Ver en HTML</a>
+                            <a href="docs/PLANTILLA_CASO_DE_NEGOCIO_(2).pdf" download class="btn btn-secondary btn-sm">Descargar</a>
+                            <a href="https://drive.google.com/file/d/1XvJT3EzCshDk3560NX2LIZpWp64JUYE0/view?usp=sharing" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="btn btn-info btn-sm">Ver Grabación</a>
+                        </div>
                     </div>
+                </div>
+            </div>
+            
+            <!-- EDT-ROADMAP -->
+            <div class="col-md-6 col-lg-4 fade-in-up">
+                <div class="project-card h-100">
+                    <div class="project-image">
+                        <img src="images/road-map.jpg" 
+                             alt="Imagen EDT-ROADMAP" 
+                             class="img-fluid rounded-top"
+                             loading="lazy"
+                             width="400"
+                             height="225">
+                    </div>
+                    <div class="p-3">
+                        <h3 class="h4">EDT-ROADMAP</h3>
+                        <h5 class="h6 text-muted">Tareas Realizadas:</h5>
+                        <ul class="mb-3">
+                            <li>Semana 8: EDT-ROADMAP</li>
+                        </ul>
+                        <div class="buttons d-grid gap-2 d-md-block">
+                            <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#previewModal" onclick="loadPreview('docs/gestion a.pdf')">Vista Previa</a>
+                            <a href="docs/gestion a.pdf" download class="btn btn-secondary btn-sm">Descargar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- MATRIZ DE RIESGO -->
+            <div class="col-md-6 col-lg-4 fade-in-up">
+                <div class="project-card h-100">
+                    <div class="project-image">
+                        <img src="images/road-map.jpg" 
+                             alt="Imagen Matriz de Riesgo" 
+                             class="img-fluid rounded-top"
+                             loading="lazy"
+                             width="400"
+                             height="225">
+                    </div>
+                    <div class="p-3">
+                        <h3 class="h4">Matriz de Riesgo</h3>
+                        <h5 class="h6 text-muted">Tareas Realizadas:</h5>
+                        <ul class="mb-3">
+                            <li>Semana : Matriz de Riesgo</li>
+                        </ul>
+                        <div class="buttons d-grid gap-2 d-md-block">
+                            <a href="https://1drv.ms/x/c/4d2e9175623d706c/ETymUesEC1pMrg06_2ZMQZ4BeiRBq5Jt3OAg5TG3zPwOHQ?e=fUAJll" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="btn btn-primary btn-sm">Vista Previa</a>
+                            <a href="https://1drv.ms/x/c/4d2e9175623d706c/ETymUesEC1pMrg06_2ZMQZ4BeiRBq5Jt3OAg5TG3zPwOHQ?e=fUAJll" 
+                               download 
+                               class="btn btn-secondary btn-sm">Descargar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- MATRIZ DE COMUNICACIONES -->
+            <div class="col-md-6 col-lg-4 fade-in-up">
+                <div class="project-card h-100">
+                    <div class="project-image">
+                        <img src="images/road-map.jpg" 
+                             alt="Imagen Matriz de Comunicaciones" 
+                             class="img-fluid rounded-top"
+                             loading="lazy"
+                             width="400"
+                             height="225">
+                    </div>
+                    <div class="p-3">
+                        <h3 class="h4">Matriz de Comunicaciones</h3>
+                        <h5 class="h6 text-muted">Tareas Realizadas:</h5>
+                        <ul class="mb-3">
+                            <li>Semana : Matriz de Comunicaciones</li>
+                        </ul>
+                        <div class="buttons d-grid gap-2 d-md-block">
+                            <a href="https://1drv.ms/x/c/4d2e9175623d706c/EeX_0VvDLr1BlG7Em63NNOkBC3aKE7BsqAf12XUK91O__w?e=tLagMa" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="btn btn-primary btn-sm">Vista Previa</a>
+                            <a href="https://1drv.ms/x/c/4d2e9175623d706c/EeX_0VvDLr1BlG7Em63NNOkBC3aKE7BsqAf12XUK91O__w?e=tLagMa" 
+                               download 
+                               class="btn btn-secondary btn-sm">Descargar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- OFERTA TÉCNICA -->
+            <div class="col-md-6 col-lg-4 fade-in-up">
+                <div class="project-card h-100">
+                    <div class="project-image">
+                        <img src="images/road-map.jpg" 
+                             alt="Imagen Oferta Técnica" 
+                             class="img-fluid rounded-top"
+                             loading="lazy"
+                             width="400"
+                             height="225">
+                    </div>
+                    <div class="p-3">
+                        <h3 class="h4">Oferta Técnica</h3>
+                        <h5 class="h6 text-muted">Tareas Realizadas:</h5>
+                        <ul class="mb-3">
+                            <li>Semana : Oferta Técnica</li>
+                        </ul>
+                        <div class="buttons d-grid gap-2 d-md-block">
+                            <a href="https://ugbedu-my.sharepoint.com/:w:/g/personal/smss014022_ugb_edu_sv/ESJlgHl9L3pJvSG18K1Y3jcB33F7mBkafBWS6AEvIO0LVw?e=5YXm78" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="btn btn-primary btn-sm">Vista Previa</a>
+                            <a href="https://ugbedu-my.sharepoint.com/:w:/g/personal/smss014022_ugb_edu_sv/ESJlgHl9L3pJvSG18K1Y3jcB33F7mBkafBWS6AEvIO0LVw?e=5YXm78" 
+                               download 
+                               class="btn btn-secondary btn-sm">Descargar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- OFERTA ECONÓMICA -->
+            <div class="col-md-6 col-lg-4 fade-in-up">
+                <div class="project-card h-100">
+                    <div class="project-image">
+                        <img src="images/road-map.jpg" 
+                             alt="Imagen Oferta Económica" 
+                             class="img-fluid rounded-top"
+                             loading="lazy"
+                             width="400"
+                             height="225">
+                    </div>
+                    <div class="p-3">
+                        <h3 class="h4">Oferta Económica</h3>
+                        <h5 class="h6 text-muted">Tareas Realizadas:</h5>
+                        <ul class="mb-3">
+                            <li>Semana : Oferta Económica</li>
+                        </ul>
+                        <div class="buttons d-grid gap-2 d-md-block">
+                            <a href="https://ugbedu-my.sharepoint.com/:w:/g/personal/smss014022_ugb_edu_sv/EeRVhUcvyxNHqKoSRYIAhPEBZI5Pon0mkcciIzA6kpmpUA?rtime=UJ0PXfKA3Ug" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="btn btn-primary btn-sm">Vista Previa</a>
+                            <a href="https://ugbedu-my.sharepoint.com/:w:/g/personal/smss014022_ugb_edu_sv/EeRVhUcvyxNHqKoSRYIAhPEBZI5Pon0mkcciIzA6kpmpUA?rtime=UJ0PXfKA3Ug" 
+                               download 
+                               class="btn btn-secondary btn-sm">Descargar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Carta de recepción -->
+            <div class="col-md-6 col-lg-4 fade-in-up">
+                <div class="project-card h-100">
+                    <div class="project-image">
+                        <img src="images/recepcion.jpg" 
+                             alt="Imagen Carta de Recepción" 
+                             class="img-fluid rounded-top"
+                             loading="lazy"
+                             width="400"
+                             height="225">
+                    </div>
+                    <div class="p-3">
+                        <h3 class="h4">Carta de Recepción</h3>
+                        <h5 class="h6 text-muted">Tareas Realizadas:</h5>
+                        <ul class="mb-3">
+                            <li>Semana : Carta de Recepción</li>
+                        </ul>
+                        <div class="buttons d-grid gap-2 d-md-block">
+                            <a href="docs/annotated-ACTA%20DE%20RECEPCION.docx.pdf" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="btn btn-primary btn-sm">Vista Previa</a>
+                            <a href="docs/annotated-ACTA%20DE%20RECEPCION.docx.pdf" 
+                               download 
+                               class="btn btn-secondary btn-sm">Descargar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Solicitud de cambio -->
+            <div class="col-md-6 col-lg-4 fade-in-up">
+                <div class="project-card h-100">
+                    <div class="project-image">
+                        <img src="images/solicitud.jpg" 
+                             alt="Imagen Solicitud de Cambio" 
+                             class="img-fluid rounded-top"
+                             loading="lazy"
+                             width="400"
+                             height="225">
+                    </div>
+                    <div class="p-3">
+                        <h3 class="h4">Solicitud de Cambio</h3>
+                        <h5 class="h6 text-muted">Tareas Realizadas:</h5>
+                        <ul class="mb-3">
+                            <li>Semana : Solicitud de cambio</li>
+                        </ul>
+                        <div class="buttons d-grid gap-2 d-md-block">
+                            <a href="docs/annotated-pleitez.docx.pdf" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="btn btn-primary btn-sm">Vista Previa</a>
+                            <a href="docs/annotated-pleitez.docx.pdf" 
+                               download 
+                               class="btn btn-secondary btn-sm">Descargar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- cierre del proyecto -->
+            <div class="col-md-6 col-lg-4 fade-in-up">
+                <div class="project-card h-100">
+                    <div class="project-image">
+                        <img src="images/cierre-del-proyecto.jpg" 
+                             alt="Imagen Informe de cierre del proyecto" 
+                             class="img-fluid rounded-top"
+                             loading="lazy"
+                             width="400"
+                             height="225">
+                    </div>
+                    <div class="p-3">
+                        <h3 class="h4">Informe de cierre del proyecto</h3>
+                        <h5 class="h6 text-muted">Tareas Realizadas:</h5>
+                        <ul class="mb-3">
+                            <li>Semana : Informe de cierre del proyecto</li>
+                        </ul>
+                        <div class="buttons d-grid gap-2 d-md-block">
+                            <a href="https://bit.ly/45JoUfJ" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="btn btn-primary btn-sm">Vista Previa</a>
+                            <a href="https://bit.ly/45JoUfJ" 
+                               download 
+                               class="btn btn-secondary btn-sm">Descargar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- video render -->
+            <div class="col-md-6 col-lg-4 fade-in-up">
+                <div class="project-card h-100">
+                    <div class="project-image">
+                        <img src="images/render1.jpg" 
+                             alt="Imagen video render" 
+                             class="img-fluid rounded-top"
+                             loading="lazy"
+                             width="400"
+                             height="225">
+                    </div>
+                    <div class="p-3">
+                        <h3 class="h4">Video Render</h3>
+                        <h5 class="h6 text-muted">Tareas Realizadas:</h5>
+                        <ul class="mb-3">
+                            <li>Semana : Render</li>
+                        </ul>
+                        <div class="buttons d-grid gap-2 d-md-block">
+                            <a href="https://www.youtube.com/watch?v=QlYeDoN5Eqc" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="btn btn-primary btn-sm">Vista Previa</a>
+                            <a href="https://www.youtube.com/watch?v=QlYeDoN5Eqc" 
+                               download 
+                               class="btn btn-secondary btn-sm">Descargar</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
 
     <!-- Modal para la vista previa -->
     <div class="modal fade" id="previewModal" tabindex="-1" aria-labelledby="previewModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header bg-dark text-white">
                     <h5 class="modal-title" id="previewModalLabel">Vista Previa del Documento</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <iframe id="previewIframe" src="" width="100%" height="500px" style="border:none;"></iframe>
+                <div class="modal-body p-0">
+                    <iframe id="previewIframe" src="" width="100%" height="600px" style="border:none;"></iframe>
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer bg-light">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">© 2025 UGBHUB. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
-    <!-- EDT-ROADMAP -->
-    <div class="col-md-6 col-lg-4 mb-4 fade-in-up">
-        <div class="project-card">
-            <div class="project-image">
-                <img src="images/road-map.jpg" alt="Imagen Creando OKRS" class="img-fluid">
-            </div>
-            <h3>EDT-ROADMAP</h3>
-            <h5>Tareas Realizadas:</h5>
-            <ul>
-                <li>Semana 8: EDT-ROADMAP</li>
-            </ul>
-            <div class="buttons">
-                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#previewModal" onclick="loadPreview('docs/gestion a.pdf')">Vista Previa</a>
-                <a href="docs/gestion a.pdf" download class="btn btn-secondary">Descargar</a>
-                
-            </div>
-        </div>
-    </div>
-
-    <!-- MATRIZ DE RIESGO -->
-<div class="col-md-6 col-lg-4 mb-4 fade-in-up">
-    <div class="project-card">
-        <div class="project-image">
-            <img src="images/road-map.jpg" alt="Imagen Matriz de Riesgo" class="img-fluid">
-        </div>
-        <h3>Matriz de Riesgo</h3>
-        <h5>Tareas Realizadas:</h5>
-        <ul>
-            <li>Semana : Matriz de Riesgo</li>
-        </ul>
-        <div class="buttons">
-            <a href="https://1drv.ms/x/c/4d2e9175623d706c/ETymUesEC1pMrg06_2ZMQZ4BeiRBq5Jt3OAg5TG3zPwOHQ?e=fUAJll" class="btn btn-primary" target="_blank">Vista Previa</a>
-            <a href="https://1drv.ms/x/c/4d2e9175623d706c/ETymUesEC1pMrg06_2ZMQZ4BeiRBq5Jt3OAg5TG3zPwOHQ?e=fUAJll" download class="btn btn-secondary">Descargar</a>
-        </div>
-    </div>
-</div>
-
-<!-- MATRIZ DE COMUNICACIONES -->
-<div class="col-md-6 col-lg-4 mb-4 fade-in-up">
-    <div class="project-card">
-        <div class="project-image">
-            <img src="images/road-map.jpg" alt="Imagen Matriz de Comunicaciones" class="img-fluid">
-        </div>
-        <h3>Matriz de Comunicaciones</h3>
-        <h5>Tareas Realizadas:</h5>
-        <ul>
-            <li>Semana : Matriz de Comunicaciones</li>
-        </ul>
-        <div class="buttons">
-            <a href="https://1drv.ms/x/c/4d2e9175623d706c/EeX_0VvDLr1BlG7Em63NNOkBC3aKE7BsqAf12XUK91O__w?e=tLagMa" class="btn btn-primary" target="_blank">Vista Previa</a>
-            <a href="https://1drv.ms/x/c/4d2e9175623d706c/EeX_0VvDLr1BlG7Em63NNOkBC3aKE7BsqAf12XUK91O__w?e=tLagMa" download class="btn btn-secondary">Descargar</a>
-        </div>
-    </div>
-</div>
-<!-- OFERTA TÉCNICA -->
-<div class="col-md-6 col-lg-4 mb-4 fade-in-up">
-    <div class="project-card">
-        <div class="project-image">
-            <img src="images/road-map.jpg" alt="Imagen Oferta Técnica" class="img-fluid">
-        </div>
-        <h3>Oferta Técnica</h3>
-        <h5>Tareas Realizadas:</h5>
-        <ul>
-            <li>Semana : Oferta Técnica</li>
-        </ul>
-        <div class="buttons">
-            <a href="https://ugbedu-my.sharepoint.com/:w:/g/personal/smss014022_ugb_edu_sv/ESJlgHl9L3pJvSG18K1Y3jcB33F7mBkafBWS6AEvIO0LVw?e=5YXm78" class="btn btn-primary" target="_blank">Vista Previa</a>
-            <a href="https://ugbedu-my.sharepoint.com/:w:/g/personal/smss014022_ugb_edu_sv/ESJlgHl9L3pJvSG18K1Y3jcB33F7mBkafBWS6AEvIO0LVw?e=5YXm78" download class="btn btn-secondary">Descargar</a>
-        </div>
-    </div>
-</div>
-<!-- OFERTA ECONÓMICA -->
-<div class="col-md-6 col-lg-4 mb-4 fade-in-up">
-    <div class="project-card">
-        <div class="project-image">
-            <img src="images/road-map.jpg" alt="Imagen Oferta Económica" class="img-fluid">
-        </div>
-        <h3>Oferta Económica</h3>
-        <h5>Tareas Realizadas:</h5>
-        <ul>
-            <li>Semana : Oferta Económica</li>
-        </ul>
-        <div class="buttons">
-            <a href="https://ugbedu-my.sharepoint.com/:w:/g/personal/smss014022_ugb_edu_sv/EeRVhUcvyxNHqKoSRYIAhPEBZI5Pon0mkcciIzA6kpmpUA?rtime=UJ0PXfKA3Ug" class="btn btn-primary" target="_blank">Vista Previa</a>
-            <a href="https://ugbedu-my.sharepoint.com/:w:/g/personal/smss014022_ugb_edu_sv/EeRVhUcvyxNHqKoSRYIAhPEBZI5Pon0mkcciIzA6kpmpUA?rtime=UJ0PXfKA3Ug" download class="btn btn-secondary">Descargar</a>
-        </div>
-    </div>
-</div>
-<!-- Carta de recepción -->
-<div class="col-md-6 col-lg-4 mb-4 fade-in-up">
-    <div class="project-card">
-        <div class="project-image">
-            <img src="images/recepcion.jpg" alt="Imagen Oferta Económica" class="img-fluid">
-        </div>
-        <h3>Carta de Recepción</h3>
-        <h5>Tareas Realizadas:</h5>
-        <ul>
-            <li>Semana : Carta de Recepción</li>
-        </ul>
-        <div class="buttons">
-            <a href="docs/annotated-ACTA%20DE%20RECEPCION.docx.pdf" target="_blank" class="btn btn-primary">Vista Previa</a>
-            <a href="docs/annotated-ACTA%20DE%20RECEPCION.docx.pdf" download class="btn btn-secondary">Descargar</a>
-        </div>
-    </div>
-</div>
-
-
-<!-- Solicitud de cambio -->
-<div class="col-md-6 col-lg-4 mb-4 fade-in-up">
-    <div class="project-card">
-        <div class="project-image">
-            <img src="images/solicitud.jpg" alt="Imagen Oferta Económica" class="img-fluid">
-        </div>
-        <h3>Solicitud de Cambio</h3>
-        <h5>Tareas Realizadas:</h5>
-        <ul>
-            <li>Semana : Solicitud de cambio</li>
-        </ul>
-        <div class="buttons">
-            <a href="docs/annotated-pleitez.docx.pdf" target="_blank" class="btn btn-primary">Vista Previa</a>
-            <a href="docs/annotated-pleitez.docx.pdf" download class="btn btn-secondary">Descargar</a>
-        </div>
-    </div>
-</div>
-<!-- cierre del proyecto -->
-<div class="col-md-6 col-lg-4 mb-4 fade-in-up">
-    <div class="project-card">
-        <div class="project-image">
-            <img src="images/cierre-del-proyecto.jpg" alt="Imagen Oferta Económica" class="img-fluid">
-        </div>
-        <h3>Informe de cierre del proyecto</h3>
-        <h5>Tareas Realizadas: Informe de cierre del proyecto</h5>
-        <ul>
-            <li>Semana : Informe de cierre del proyecto</li>
-        </ul>
-        <div class="buttons">
-            <a href="https://bit.ly/45JoUfJ" target="_blank" class="btn btn-primary">Vista Previa</a>
-            <a href="https://bit.ly/45JoUfJ" download class="btn btn-secondary">Descargar</a>
-        </div>
-    </div>
-</div>
-
-<!-- video render  -->
-<div class="col-md-6 col-lg-4 mb-4 fade-in-up">
-    <div class="project-card">
-        <div class="project-image">
-            <img src="images/render1.jpg" alt="Imagen Oferta Económica" class="img-fluid">
-        </div>
-        <h3>video render</h3>
-        <h5>Tareas Realizadas: Render</h5>
-        <ul>
-            <li>Semana : Render</li>
-        </ul>
-        <div class="buttons">
-            <a href="https://www.youtube.com/watch?v=QlYeDoN5Eqc" target="_blank" class="btn btn-primary">Vista Previa</a>
-            <a href="https://www.youtube.com/watch?v=QlYeDoN5Eqc" download class="btn btn-secondary">Descargar</a>
-        </div>
-    </div>
-</div>
-
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
+    <!-- Bootstrap JS (cargado al final del body para mejor performance) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
+    <!-- Custom JS (cargado con defer) -->
+    <script defer>
         function loadPreview(url) {
             document.getElementById('previewIframe').src = url;
         }
+        
+        // Efecto de aparición gradual para las tarjetas
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.fade-in-up');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
     </script>
 </body>
 </html>
